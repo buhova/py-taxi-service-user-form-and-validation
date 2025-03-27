@@ -33,7 +33,7 @@ class DriverCreationForm(UserCreationForm):
 class DriverLicenseUpdateForm(forms.ModelForm):
     class Meta:
         model = Driver
-        fields = ["license_number",]
+        fields = ["license_number", ]
 
     def clean_license_number(self):
         return validate_license_number(self.cleaned_data["license_number"])
